@@ -11,6 +11,5 @@ greet("KIM");
 function add (a ,b) {
     return a + b;
 }
-
 const result = add(1, 3);
 console.log(`1+3 = ${result}`)
