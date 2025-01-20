@@ -15,3 +15,10 @@ const squared = numbers.map(function (num) {
     return num*num*num;
 });
 console.log(squared);
+
+const evens = numbers.filter(
+    function (num) {
+        return num % 2 === 0;
+    }
+);
+console.log(evens);
