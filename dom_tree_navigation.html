@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 트리 탐색</title>
+</head>
+<body>
+    <div id="container">
+        <h1>안녕하세요</h1>
+        <p>이 문장은 dom 트리의 일부입니다.</p>
+        <ul>
+            <li>첫 항목</li>
+            <li>두번째 항목</li>
+        </ul>
+    </div>
+
+    <script>
+        const container = document.getElementById("container");
+        console.log(container);
+
+        const heading = container.querySelector("h1");
+        console.log("Heading 텍스트", heading.textContent);
+
+        const listItems = container.querySelectorAll("li");
+        listItems.forEach((item, index) => {
+            console.log(`항목 ${index + 1}: ${item.textContent}`);
+        });
+
+    </script>
+</body>
+</html>
