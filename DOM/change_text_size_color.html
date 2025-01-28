@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text style</title>
+</head>
+<body>
+    <h1 id="title">Style Me!</h1>
+    <input type="number" id="fontSizeInput" placeholder="Font size (px)" />
+    <input type="color" id="colorInput" />
+    <button id="applyStyleButton">Apply style</button>
+
+    <script>
+        const title = document.getElementById("title");
+        const fontSizeInput = document.getElementById("fontSizeInput");
+        const colorInput = document.getElementById("colorInput");
+        const button = document.getElementById("applyStyleButton");
+
+        button.addEventListener("click", function() {
+            const fontSize = fontSizeInput.value + "px";
+            const color = colorInput.value;
+
+            title.style.fontSize = fontSize;
+            title.style.color = color;
+        });
+        
+
+    </script>
+</body>
+</html>
