@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heighlight{
+            color: white;
+            background-color: blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">Click the button to heighlight this text!</p>
+    <button id="toggleButton">Toggle heighlight</button>
+
+    <script>
+        const text = document.getElementById("text");
+        const button = document.getElementById("toggleButton");
+
+        button.addEventListener("click", function(){
+            text.classList.toggle("heighlight");
+        });
+    </script>
+</body>
+</html>

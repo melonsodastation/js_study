@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change List Colors</title>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="changeListButton">Change Color</button>
+
+    <script>
+        const listItems = document.querySelectorAll("li");
+        const button = document.getElementById("changeListButton");
+        let colorIndex = 0;
+        const colors = ["red", "green", "blue"];
+
+        button.addEventListener("click", function(){
+            listItems.forEach((item, index) => {
+                item.style.color = colors[(colorIndex + index) % colors.length];
+            });
+            colorIndex++;
+        });
+    </script>
+</body>
+</html>
